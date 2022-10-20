@@ -1,13 +1,10 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
-
-name: Node.js CI
+name: CI/CD
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ main ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -17,17 +14,36 @@ jobs:
     strategy:
       matrix:
         node-version: [14.x, 16.x, 18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test -- --coverage
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run the tests and generate coverage report
+      run: npm test -- --coverage
+
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
+
+    - name: Build
+      run: npm run build
+
+    - name: Deploy
+      run: |
+        git config --global user.name aislinggallagher
+        git config --global user.email gallagheraisling01@gmail.com
+        git remote set-url origin https://github.com/aislinggallagher/SoftwareEngineeringAssignment2
+        npm run deploy
+      env:
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
+        github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
+        repository: ${{ github.repository }}
