@@ -153,5 +153,4 @@ const App = () => {
     </Wrapper>
   );
 };
-
 export default App;
