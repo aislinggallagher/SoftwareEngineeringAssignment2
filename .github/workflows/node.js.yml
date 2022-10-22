@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [16.x]
 
     steps:
     - name: Checkout repository
@@ -37,13 +37,13 @@ jobs:
       run: npm run build
 
     - name: Deploy
-      run: |
-        git config --global user.name aislinggallagher
-        git config --global user.email gallagheraisling01@gmail.com
-        git remote set-url origin https://github.com/aislinggallagher/SoftwareEngineeringAssignment2
-        npm run deploy
-      env:
-        user_name: 'github-actions[bot]'
-        user_email: 'github-actions[bot]@users.noreply.github.com'
-        github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
-        repository: ${{ github.repository }}
+        run: |
+          git config --global user.name aislinggallagher
+          git config --global user.email gallagheraisling01@gmail.com
+          git remote set-url origin https://github.com/aislinggallagher/SoftwareEngineeringAssignment2
+          npm run deploy
+        env:
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
+          repository: ${{ github.repository }}
