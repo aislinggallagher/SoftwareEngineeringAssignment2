@@ -6,7 +6,7 @@ import ButtonBox from "./components/ButtonBox";
 import Button from "./components/Button";
 
 const btnValues = [
-  ["C", "+-", "%", "/"],
+  ["C", "+-", "%", "/", "^"],
   [7, 8, 9, "X"],
   [4, 5, 6, "-"],
   [1, 2, 3, "+"],
@@ -19,7 +19,7 @@ const toLocaleString = (num) =>
 const removeSpaces = (num) => num.toString().replace(/\s/g, "");
 
 const math = (a, b, sign) =>
-  sign === "+" ? a + b : sign === "-" ? a - b : sign === "X" ? a * b : a / b;
+  sign === "+" ? a + b : sign === "-" ? a - b : sign === "X" ? a * b : sign === "^" ? Math.pow(a, b) : a / b;
 
 const App = () => {
   let [calc, setCalc] = useState({
@@ -140,7 +140,7 @@ const App = () => {
                   ? percentClickHandler
                   : btn === "="
                   ? equalsClickHandler
-                  : btn === "/" || btn === "X" || btn === "-" || btn === "+"
+                  : btn === "/" || btn === "X" || btn === "-" || btn === "+" || btn === "^"
                   ? signClickHandler
                   : btn === "."
                   ? comaClickHandler
