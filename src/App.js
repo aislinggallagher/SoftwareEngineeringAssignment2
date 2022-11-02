@@ -52,7 +52,7 @@ const App = () => {
       num: !calc.num.toString().includes(".") ? calc.num + value : calc.num,
     });
   };
-
+//test
   const signClickHandler = (e) => {
     setCalc({
       ...calc,
