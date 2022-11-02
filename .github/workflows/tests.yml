@@ -14,7 +14,7 @@ jobs:
       - run: yarn install
       - run: yarn test:ci
 
-      - name: Tests ✅
+      - name: Tests ✅✅
         if: ${{ success() }}
         run: |
           curl --request POST \
