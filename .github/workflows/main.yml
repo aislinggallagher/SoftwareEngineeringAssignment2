@@ -30,7 +30,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/SoftwareEngineeringAssignment2:latest-version
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/swengcalc:latest-version
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
