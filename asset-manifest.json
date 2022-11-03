@@ -1,22 +1,13 @@
 {
   "files": {
-    "main.css": "/aislinggallagher/SoftwareEngineeringAssignment2/static/css/main.489b2cb9.chunk.css",
-    "main.js": "/aislinggallagher/SoftwareEngineeringAssignment2/static/js/main.ae445d2d.chunk.js",
-    "main.js.map": "/aislinggallagher/SoftwareEngineeringAssignment2/static/js/main.ae445d2d.chunk.js.map",
-    "runtime-main.js": "/aislinggallagher/SoftwareEngineeringAssignment2/static/js/runtime-main.700601df.js",
-    "runtime-main.js.map": "/aislinggallagher/SoftwareEngineeringAssignment2/static/js/runtime-main.700601df.js.map",
-    "static/js/2.61188ba5.chunk.js": "/aislinggallagher/SoftwareEngineeringAssignment2/static/js/2.61188ba5.chunk.js",
-    "static/js/2.61188ba5.chunk.js.map": "/aislinggallagher/SoftwareEngineeringAssignment2/static/js/2.61188ba5.chunk.js.map",
+    "main.css": "/aislinggallagher/SoftwareEngineeringAssignment2/static/css/main.217c9bfc.css",
+    "main.js": "/aislinggallagher/SoftwareEngineeringAssignment2/static/js/main.e8c4eee6.js",
     "index.html": "/aislinggallagher/SoftwareEngineeringAssignment2/index.html",
-    "precache-manifest.91fbf7c800dfbe06a817388906f19d53.js": "/aislinggallagher/SoftwareEngineeringAssignment2/precache-manifest.91fbf7c800dfbe06a817388906f19d53.js",
-    "service-worker.js": "/aislinggallagher/SoftwareEngineeringAssignment2/service-worker.js",
-    "static/css/main.489b2cb9.chunk.css.map": "/aislinggallagher/SoftwareEngineeringAssignment2/static/css/main.489b2cb9.chunk.css.map",
-    "static/js/2.61188ba5.chunk.js.LICENSE.txt": "/aislinggallagher/SoftwareEngineeringAssignment2/static/js/2.61188ba5.chunk.js.LICENSE.txt"
+    "main.217c9bfc.css.map": "/aislinggallagher/SoftwareEngineeringAssignment2/static/css/main.217c9bfc.css.map",
+    "main.e8c4eee6.js.map": "/aislinggallagher/SoftwareEngineeringAssignment2/static/js/main.e8c4eee6.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.700601df.js",
-    "static/js/2.61188ba5.chunk.js",
-    "static/css/main.489b2cb9.chunk.css",
-    "static/js/main.ae445d2d.chunk.js"
+    "static/css/main.217c9bfc.css",
+    "static/js/main.e8c4eee6.js"
   ]
 }
