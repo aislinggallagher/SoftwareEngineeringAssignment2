@@ -1,6 +1,6 @@
 # React Calculator
 
-A calculator project built with React.
+A calculator project built with React, JavaScript.
 
 ## Features
 
